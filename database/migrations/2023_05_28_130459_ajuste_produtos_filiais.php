@@ -48,8 +48,8 @@ return new class extends Migration
         //Adicionar colunas da tabela produtos
         Schema::table('produtos', function (Blueprint $table) {
             $table->decimal('preco_venda', 8, 2);
-            $table->decimal('estoque_minimo', 8, 2);
-            $table->decimal('estoque_maximo', 8, 2);
+            $table->integer('estoque_minimo');
+            $table->integer('estoque_maximo');
         });
 
         Schema::dropIfExists('produto_filiais');
